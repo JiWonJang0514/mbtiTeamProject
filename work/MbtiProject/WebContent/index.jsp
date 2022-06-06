@@ -150,7 +150,7 @@
         
         <div class="banner">
             <div>
-                <h2>천생연분 연인을 찾고 싶다면?</h2>
+                <h2>천생연분 궁합을 알고 싶다면?</h2>
                 <a href="work/chemistry.jsp">궁합보기</a>
             </div>
         </div>

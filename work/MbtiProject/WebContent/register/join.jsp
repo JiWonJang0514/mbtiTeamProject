@@ -153,24 +153,24 @@
 	                    <small>엠비티아이</small><br>
 	                    <select name="mbti" id="mbti">
 		                    <option value="INTJ">INTJ</option>
-		                    <option value="INTJ">INTP</option>
-		                    <option value="INTJ">ENTJ</option>
-		                    <option value="INTJ">ENTP</option>
+		                    <option value="INTP">INTP</option>
+		                    <option value="ENTJ">ENTJ</option>
+		                    <option value="ENTP">ENTP</option>
 		    
-		                    <option value="INTJ">INFJ</option>
-		                    <option value="INTJ">INFP</option>
-		                    <option value="INTJ">ENFJ</option>
-		                    <option value="INTJ">ENFP</option>
+		                    <option value="INFJ">INFJ</option>
+		                    <option value="INFP">INFP</option>
+		                    <option value="ENFJ">ENFJ</option>
+		                    <option value="ENFP">ENFP</option>
 		    
-		                    <option value="INTJ">ISTJ</option>
-		                    <option value="INTJ">ISFJ</option>
-		                    <option value="INTJ">ESTJ</option>
-		                    <option value="INTJ">ESFJ</option>
+		                    <option value="ISTJ">ISTJ</option>
+		                    <option value="ISFJ">ISFJ</option>
+		                    <option value="ESTJ">ESTJ</option>
+		                    <option value="ESFJ">ESFJ</option>
 		    
-		                    <option value="INTJ">ISTP</option>
-		                    <option value="INTJ">ISFP</option>
-		                    <option value="INTJ">ESTP</option>
-		                    <option value="INTJ">ESFP</option>
+		                    <option value="ISTP">ISTP</option>
+		                    <option value="ISFP">ISFP</option>
+		                    <option value="ESTP">ESTP</option>
+		                    <option value="ESFP">ESFP</option>
 		                </select>
 	                </div>
 	                

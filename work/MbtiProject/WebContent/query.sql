@@ -8,15 +8,10 @@ create table users(
 );
 
 create table mbti(
-	mbti varchar(50),
-	other_mbti varchar(50),
-	match varchar(50)
-);
-
-create table explains(
 	mbti_1 varchar(50),
 	mbti_2 varchar(50),
-	match varchar(50)
+	match varchar(50),
+	explain varchar(1000)
 );
 
 insert into users values('wendy05', '1234', '장장장', 18, 'f', 'INFJ');
