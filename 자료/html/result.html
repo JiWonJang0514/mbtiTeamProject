@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 공통--- */
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .wrapper {
+            margin: auto;
+            width: 1300px;
+        }
+
+        footer {
+            padding-top: 50px;
+            padding-bottom: 25px;
+            text-align: center;
+            color: gray;
+        }
+
+        .text-right {
+            text-align: right;
+        }
+        /* ------ */
+
+        /* 헤더메뉴 */
+        header {
+            margin-bottom: 50px;
+            width: 100%;
+            background-color: lightgray;
+        }
+
+        nav {
+            padding: 0 1rem;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        nav > ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+        }
+
+        nav > ul > li {
+            padding: 1.5rem 1.2rem 1.5rem 0.8rem;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        #util_menu {
+            padding-right: 0.8rem;
+        }
+        #util_menu > li {
+            padding: 1.7rem 0;
+            font-size: 14px;
+        }
+
+        /* 콘텐츠 */
+        #container {
+            margin: auto;
+            width: 800px;
+            text-align: center;
+        }
+
+        #type_box {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .type_item {
+            padding: 20px;
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">MYPAGE</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">연인궁합</a></li>
+                <li><a href="#">친구궁합</a></li>
+                <li><a href="#">매칭하기</a></li>
+            </ul>
+            <ul id="util_menu">
+                <li><a href="#">로그인</a>&nbsp;&nbsp;|&nbsp;&nbsp;</li>
+                <li><a href="#">회원가입</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="wrapper">
+        <a class="back" href="#">(아이콘)이전으로</a>
+
+        <div id="container">
+            <div class="icon">
+                <img src="#">
+            </div>
+
+            <div id="type_box">
+                <div class="type_item">
+                    <h1>INTP</h1>
+                    <div class="type_img">
+                        <img src="#">
+                    </div>
+                </div>
+                <div class="type_item">
+                    <h1>INTP</h1>
+                    <div class="type_img">
+                        <img src="#">
+                    </div>
+                </div>
+            </div>
+
+            <p>
+                모든 국민은 사생활의 비밀과 자유를 침해받지 아니한다.  법률이 정하는 바에 우선적으로 근로 부여받는다. 국가유공자·상이군경 및 전몰군경의 유가족은 법률이 정하는 바에 의하여 우선적으로 근로의 기회를 부여받는다.
+            </p>
+        </div>
+    </div>
+
+    <footer>
+        Copyright 2022. YYDH Software 2-2. All rights reserved.
+    </footer>
+</body>
+</html>
