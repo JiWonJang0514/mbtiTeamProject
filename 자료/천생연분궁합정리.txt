@@ -1,0 +1,47 @@
+infp  enfj
+infp  entj
+
+enfp  infj
+enfp  intj
+
+infj  enfp
+infj  entp
+
+enfj  infp
+enfj  isfp
+
+intj  enfp
+intj  entp
+
+entj  infp
+entj  intp
+
+intp  entj
+intp  estj
+
+entp  infj
+entp  intj
+
+isfp  enfj
+isfp  esfj
+
+esfp  isfj
+esfp  istj
+
+istp  esfj
+istp estj
+
+estp  isfj
+estp  istj
+
+isfj  esfp
+isfj  estp
+
+esfj  isfp
+esfj  istp
+
+istj  esfp
+istj  estp
+
+estj  isfp
+estj  istp
