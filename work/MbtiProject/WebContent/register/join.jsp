@@ -92,7 +92,7 @@
 	    <a class="back" href="#">(아이콘)이전으로</a>
 	
 	    <div id="container">
-	        <form action="/join" method="post">
+	        <form action="/join" method="get">
 	            <h1>회원가입</h1>
 	
 	            <div>
