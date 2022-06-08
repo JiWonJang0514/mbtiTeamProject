@@ -88,19 +88,22 @@
     	padding: 10px 0 40px 0;
     	width: 400px;
     	border-radius: 20px;
-    	background: #eba7c6;
+    	background: white;
     }
     form {
     	margin: auto;
     	width: 170px;
     	text-align: center;
     	font-weight: bold;
-    	color: white;
     }
     form > div {
     	width: 100%;
     	text-align: left;
-   	}
+    }
+    form button {
+	padding: 10px 15px;
+	border-radius: 20px;
+    }
 </style>
 </head>
 <body>
@@ -142,16 +145,16 @@
 	                    <small>나이</small><br>
 	                    <input type="number" name="age" id="age">
 	                </div>
-	                <div>
+	                <div style="margin-top: 20px;">
 	                    <small>성별</small><br>
 	                    <input type="radio" name="gender" id="gender_m" value="m">
 	                    <label for="gender_m">남자</label>
 	                    <input type="radio" name="gender" id="gender_f" value="f">
 	                    <label for="gender_f">여자</label>
 	                </div>
-	                <div>
+	                <div style="margin-top: 20px;">
 	                    <small>엠비티아이</small><br>
-	                    <select name="mbti" id="mbti">
+	                    <select name="mbti" id="mbti" style="width: 177px;">
 		                    <option value="INTJ">INTJ</option>
 		                    <option value="INTP">INTP</option>
 		                    <option value="ENTJ">ENTJ</option>
