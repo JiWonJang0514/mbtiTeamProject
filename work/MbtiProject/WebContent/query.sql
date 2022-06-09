@@ -4,6 +4,9 @@ drop table mbti_match;
 select * from users;
 select * from mbti_match;
 
+--엠비티아이가 매칭에 있는 users 회원들만 셀렉트
+select a.* from users a inner join mbti_match b on b.mbti_2=a.mbti where b.mbti_1='INFP';
+
 -- 젠더는 f 여자, m 남자
 create table users(
 	id varchar(50),
@@ -21,6 +24,7 @@ create table mbti_match(
 );
 
 insert into users values('candy05', '1234', '홍길동', 18, 'm', 'INFJ');
+insert into users values('wendy05', '1234', '홍길동', 18, 'm', 'eNFJ');
 
 insert into mbti_match values('INFP', 'ENFJ');
 insert into mbti_match values('INFP', 'ENTJ');
