@@ -10,7 +10,7 @@
    body {
        margin: 0;
        padding: 0;
-       background-image: url('/resources/background.png');
+       background-color: rgb(255, 233, 243); 
    }
    
    .wrapper {

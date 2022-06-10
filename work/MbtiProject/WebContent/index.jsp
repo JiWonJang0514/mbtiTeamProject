@@ -10,7 +10,7 @@
     body {
         margin: 0;
         padding: 0;
-        background-image: url('/resources/background.png');
+        background-image: url('/resources/backgorund_01.jpg');
     }
     
     .wrapper {
@@ -95,29 +95,28 @@
         padding: 70px 80px;
         border-radius: 20px;
         background-color: white;
-        color: hotpink;
     }
     .banner h2 {
     	margin-top: 0;
    	}
     
     .wrapper a:link {
-    	color: hotpink;
+	    color: black;
     	font-size: 16px;
     	font-weight: bold;
-    	text-shadow: 0px 0px 10px violet;
+    	text-shadow: 0px 0px 10px hotpink;
     }
     .wrapper a:visited {
-    	color: hotpink;
+   	    color: black;
     	font-size: 16px;
     	font-weight: bold;
-    	text-shadow: 2px 2px 5px black;
+    	text-shadow: 2px 2px 10px hotpink;
     }
     .wrapper a:hover {
     	color: white;
     	font-size: 16px;
     	font-weight: bold;
-    	text-shadow: 2px 2px 5px hotpink;
+    	text-shadow: 2px 2px 15px rgb(198, 9, 66);
     }
 </style>
 </head>
@@ -143,7 +142,7 @@
             <p>
                 재미로 보는 엠비티아이 매칭! 자신과 맞는 인연을 찾아드립니다.
             </p>
-            <a href="https://www.16personalities.com/ko/%EB%AC%B4%EB%A3%8C-%EC%84%B1%EA%B2%A9-%EC%9C%A0%ED%98%95-%EA%B2%80%EC%82%AC">
+            <a style="color: white" href="https://www.16personalities.com/ko/%EB%AC%B4%EB%A3%8C-%EC%84%B1%EA%B2%A9-%EC%9C%A0%ED%98%95-%EA%B2%80%EC%82%AC">
                 내 MBTI를 모른다면?
             </a>
         </div>
