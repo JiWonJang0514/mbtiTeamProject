@@ -100,6 +100,49 @@
 	    </nav>
 	</header>
 	
+	<div class="wrapper">
+	    <div id="container">
+	        <form action="/login" method="get">
+	            <h1>마이페이지</h1>
+	
+	            <div>
+	                <div>
+	                    <small>이름</small><br>
+	                    <input type="text" name="name" id="name">
+	                </div>
+	                <div style="margin-top: 20px;">
+	                    <small>엠비티아이</small><br>
+	                    <select name="mbti" id="mbti" style="width: 177px;">
+		                    <option value="INTJ">INTJ</option>
+		                    <option value="INTP">INTP</option>
+		                    <option value="ENTJ">ENTJ</option>
+		                    <option value="ENTP">ENTP</option>
+		    
+		                    <option value="INFJ">INFJ</option>
+		                    <option value="INFP">INFP</option>
+		                    <option value="ENFJ">ENFJ</option>
+		                    <option value="ENFP">ENFP</option>
+		    
+		                    <option value="ISTJ">ISTJ</option>
+		                    <option value="ISFJ">ISFJ</option>
+		                    <option value="ESTJ">ESTJ</option>
+		                    <option value="ESFJ">ESFJ</option>
+		    
+		                    <option value="ISTP">ISTP</option>
+		                    <option value="ISFP">ISFP</option>
+		                    <option value="ESTP">ESTP</option>
+		                    <option value="ESFP">ESFP</option>
+		                </select>
+	                </div>
+	                
+	            </div>
+	            <br><br>
+	
+	            <button type="submit">수정하기</button>
+	        </form>
+	    </div>
+	</div>
+	
 	
 	<footer>
         Copyright 2022. YYDH Software 2-2. All rights reserved.

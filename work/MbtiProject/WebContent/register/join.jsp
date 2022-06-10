@@ -141,17 +141,7 @@
 	                    <small>이름</small><br>
 	                    <input type="text" name="name" id="name">
 	                </div>
-	                <div>
-	                    <small>나이</small><br>
-	                    <input type="number" name="age" id="age">
-	                </div>
-	                <div style="margin-top: 20px;">
-	                    <small>성별</small><br>
-	                    <input type="radio" name="gender" id="gender_m" value="m">
-	                    <label for="gender_m">남자</label>
-	                    <input type="radio" name="gender" id="gender_f" value="f">
-	                    <label for="gender_f">여자</label>
-	                </div>
+	                
 	                <div style="margin-top: 20px;">
 	                    <small>엠비티아이</small><br>
 	                    <select name="mbti" id="mbti" style="width: 177px;">
