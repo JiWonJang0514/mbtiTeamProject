@@ -88,19 +88,22 @@
     	padding: 10px 0 40px 0;
     	width: 400px;
     	border-radius: 20px;
-    	background: #eba7c6;
+    	background: white;
     }
     form {
     	margin: auto;
     	width: 170px;
     	text-align: center;
     	font-weight: bold;
-    	color: white;
     }
     form > div {
     	width: 100%;
     	text-align: left;
    	}
+   	form button {
+	padding: 10px 15px;
+	border-radius: 20px;
+    }
 </style>
 </head>
 <body>
@@ -110,11 +113,11 @@
 	        	MBTIwithLove
 	        </div>
 	        <ul>
-	            <li><a href="#">궁합보기</a></li>
-	            <li><a href="#">매칭하기</a></li>
-	            <li><a href="#">MYPAGE</a></li>
-	            <li><a href="#">로그인</a></li>
-	            <li><a href="#">회원가입</a></li>
+	            <li><a href="/work/chemistry.jsp">궁합보기</a></li>
+	            <li><a href="/work/matching.jsp">매칭하기</a></li>
+	            <li><a href="/register/mypage.jsp">MYPAGE</a></li>
+	            <li><a href="/register/login.jsp">로그인</a></li>
+	            <li><a href="/register/join.jsp">회원가입</a></li>
 	        </ul>
 	    </nav>
 	</header>
