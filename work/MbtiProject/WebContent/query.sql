@@ -10,8 +10,9 @@ select * from mbti_match;
 --궁합보기 셀렉트
 select * from mbti_match where mbti_1='INFP';
 
+-- 젠더는 f 여자, m 남자
 create table users(
-	id varchar(50),
+	id varchar(50) primary key,
 	pw varchar(50),
 	name varchar(50),
 	mbti varchar(50)
