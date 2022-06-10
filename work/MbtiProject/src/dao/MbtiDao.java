@@ -54,11 +54,13 @@ public class MbtiDao {
 			
 		} catch (SQLException e) {
 			e.printStackTrace();
+			System.out.println("------------------------힝히잏ㅇ");
 			
 		} finally {
 			JdbcUtil.close(conn, pstmt, rs);
 		}
 		
+		System.out.println("------------------------예ㅖㅖㅖ");
 		return list;
 	}
 	

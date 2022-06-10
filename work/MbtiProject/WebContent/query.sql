@@ -5,7 +5,10 @@ select * from users;
 select * from mbti_match;
 
 --엠비티아이가 매칭에 있는 users 회원들만 셀렉트
-select a.* from users a inner join mbti_match b on b.mbti_2=a.mbti where b.mbti_1='INFP';
+--select a.* from users a inner join mbti_match b on b.mbti_2=a.mbti where b.mbti_1='INFP';
+
+--궁합보기 셀렉트
+select * from mbti_match where mbti_1='INFP';
 
 -- 젠더는 f 여자, m 남자
 create table users(

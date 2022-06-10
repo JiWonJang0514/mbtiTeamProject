@@ -10,7 +10,7 @@
    body {
        margin: 0;
        padding: 0;
-       background-image: url('resources/background.png');
+       background-image: url('/resources/background.png');
    }
    
    .wrapper {
@@ -95,7 +95,7 @@
 	            <li><a href="/work/matching.jsp">매칭하기</a></li>
 	            <li><a href="/register/mypage.jsp">MYPAGE</a></li>
 	            <li><a href="/work/chemistry.jsp">로그인</a></li>
-	            <li><a href="#">회원가입</a></li>
+	            <li><a href="/register/join.jsp">회원가입</a></li>
 	        </ul>
 	    </nav>
 	</header>
