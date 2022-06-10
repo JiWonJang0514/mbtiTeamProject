@@ -93,12 +93,14 @@
 	        <ul>
 	            <li><a href="/work/chemistry.jsp">궁합보기</a></li>
 	            <li><a href="/work/matching.jsp">매칭하기</a></li>
-	            <li><a href="/register/mypage.jsp">MYPAGE</a></li>
+	            <li><a href="/register/mypage.jsp">마이페이지</a></li>
 	            <li><a href="/register/login.jsp">로그인</a></li>
 	            <li><a href="/register/join.jsp">회원가입</a></li>
 	        </ul>
 	    </nav>
 	</header>
+	
+	
 
     <footer>
         Copyright 2022. YYDH Software 2-2. All rights reserved.

@@ -10,13 +10,10 @@ select * from mbti_match;
 --궁합보기 셀렉트
 select * from mbti_match where mbti_1='INFP';
 
--- 젠더는 f 여자, m 남자
 create table users(
 	id varchar(50),
 	pw varchar(50),
 	name varchar(50),
-	age int,
-	gender varchar(10),
 	mbti varchar(50)
 );
 
@@ -26,8 +23,8 @@ create table mbti_match(
 	mbti_2 varchar(50)
 );
 
-insert into users values('candy05', '1234', '홍길동', 18, 'm', 'INFJ');
-insert into users values('wendy05', '1234', '홍길동', 18, 'm', 'eNFJ');
+insert into users values('candy05', '1234', '홍길동', 'INFJ');
+insert into users values('wendy05', '1234', '홍길동', 'ENFJ');
 
 insert into mbti_match values('INFP', 'ENFJ');
 insert into mbti_match values('INFP', 'ENTJ');

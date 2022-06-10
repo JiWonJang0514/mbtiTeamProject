@@ -64,6 +64,9 @@ public class MbtiDao {
 		return list;
 	}
 	
+	
+	
+	
 	//	멤버 셀렉트
 	public ArrayList<String> getMemberList() {
 		ArrayList<String> list = new ArrayList<>();
@@ -118,42 +121,20 @@ public class MbtiDao {
 	}
 
 	//	멤버 업데이트
-	public int updateMember(String userId, String userPwd) {
+//	여기서 id는 세션에 로그인상태인 아이디를 넣어줘야 함
+	public int updateMember(String name, String mbti, String id) {
 		int n = 0;
 		
 		Connection conn = null;
 		PreparedStatement pstmt = null;
-		String sql = "update member set userpwd=? where userid=?";
+		String sql = "update users set name=?, mbti=? where id=?";
 		
 		conn = JdbcUtil.getConnection();
 		try {
 			pstmt = conn.prepareStatement(sql);
-			pstmt.setString(1, userPwd);
-			pstmt.setString(2, userId);
-			n = pstmt.executeUpdate();
-			
-		} catch (SQLException e) {
-			e.printStackTrace();
-			
-		} finally {
-			JdbcUtil.close(conn, pstmt);
-		}
-		
-		return n;
-	}
-	
-	// 멤버 딜리트
-	public int deleteMember(String userId) {
-		int n = 0;
-		
-		Connection conn = null;
-		PreparedStatement pstmt = null;
-		String sql = "delete from member where userid=?";
-		
-		conn = JdbcUtil.getConnection();
-		try {
-			pstmt = conn.prepareStatement(sql);
-			pstmt.setString(1, userId);
+			pstmt.setString(1, name);
+			pstmt.setString(2, mbti);
+			pstmt.setString(3, id);
 			n = pstmt.executeUpdate();
 			
 		} catch (SQLException e) {
