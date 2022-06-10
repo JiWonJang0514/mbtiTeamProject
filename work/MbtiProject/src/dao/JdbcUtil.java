@@ -8,7 +8,8 @@ public class JdbcUtil {
 		
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
-			conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl", "hr", "hr");
+//			conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl", "hr", "hr"); //학교실습실은 이거
+			conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "hr", "hr");   //집에서는 이거
 			
 		} catch (Exception e) {
 			System.out.println("***********************DB연결실패");
