@@ -93,6 +93,7 @@
 		text-align: center;    	
    }
    #loading h2 {
+   		margin-top: -50px;
    		font-size: 35px;
    		text-shadow: 2px 2px 15px hotpink;
    		color: rgb(255, 251, 211);

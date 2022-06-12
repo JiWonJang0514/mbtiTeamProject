@@ -90,9 +90,9 @@
    /*회원목록*/
    #box {
        margin: 100px auto 0 auto;
-       width: 800px;
+       width: 1050px;
        display: grid;
-       grid-template-columns: 1fr 1fr 1fr 1fr;
+       grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
        gap: 2rem;
    }
 
@@ -179,8 +179,6 @@
 
 	<h2>당신과 잘 맞는 다른 회원</h2>
 	
-	<div id="box">
-	
 <%  
 	MbtiDao dao = new MbtiDao();
 	// 세션에 로그인한 사용자 아이디를 이용해 그 사용자의 엠비티아이를 가져와서	
@@ -188,14 +186,24 @@
 	// 유저 테이블에서 궁합 좋은 엠비티아이를 가진 다른 회원 리스트 꺼내옴
 	ArrayList<String> result = dao.getMatchingList(user.get(3));
 	
-	// 반복문을 리스트 길이만큼 도는데, 
-	// 회원의 한개한개정보들을 주르륵 배열로 응답받았기 때문에 한번에 i를 3번 증가해서 한 회원의 정보를 한번에 처리하도록 함.
-	// id, name, mbti 세 개가 반복되는 형태의 배열
-	for(int i = 0; i < result.size(); i++) {
+	if (result.size() < 1) {
 %>
-
+		<div style="margin: auto; width: 502px;">
+            <img src="/resources/fairy.png">
+        </div>
+        <h3 style='text-align: center;'>매칭된 회원이 아직 없어요..</h3>
+<%
+	} else {
+%>
+	<div id="box">
+<%
+		// 반복문을 리스트 길이만큼 도는데, 
+		// 회원의 한개한개정보들을 주르륵 배열로 응답받았기 때문에 한번에 i를 3번 증가해서 한 회원의 정보를 한번에 처리하도록 함.
+		// id, name, mbti 세 개가 반복되는 형태의 배열
+		for(int i = 0; i < result.size(); i++) {
+%>
 		<div class="item">
-            <div class="item_img">
+           	<div class="item_img">
                 <img src="/resources/fairy.png">
             </div>
             <div class="item_txt">
@@ -204,9 +212,9 @@
                 <span><%= result.get(i+2) %></span>
             </div>
         </div>
-	
 <%	
-		i += 2;
+			i += 2;
+		}
 	}
 %>
         
