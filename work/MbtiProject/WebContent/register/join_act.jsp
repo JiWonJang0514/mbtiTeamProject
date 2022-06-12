@@ -21,9 +21,11 @@
 		name = request.getParameter("name");
 		mbti = request.getParameter("mbti");
 		
+		//  폼에서 받은 값 넣어서 회원가입 인서트하는 메소드 호출.
 		n = dao.insertMember(id, pwd, name, mbti);
 			
 		if(n>0)
+			// 회원가입 후 로그인 할 수 있게 로그인으로 넘기기
 			response.sendRedirect("/register/login.jsp");
 		else
 			out.print("<script>alert('회원 가입 실패')</script>");

@@ -153,8 +153,9 @@
             <p>
                 재미로 보는 엠비티아이 매칭! 자신과 맞는 인연을 찾아드립니다.
             </p>
+            <!-- 실제 엠비티아이 성격유형 검사 사이트 주소로 연결되는 링크 -->
             <a style="color: white" href="https://www.16personalities.com/ko/%EB%AC%B4%EB%A3%8C-%EC%84%B1%EA%B2%A9-%EC%9C%A0%ED%98%95-%EA%B2%80%EC%82%AC">
-                내 MBTI를 모른다면?
+               	내 MBTI를 모른다면?
             </a>
         </div>
         

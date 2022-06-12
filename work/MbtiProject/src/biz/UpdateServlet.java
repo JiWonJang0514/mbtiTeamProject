@@ -30,6 +30,7 @@ public class UpdateServlet extends HttpServlet {
 		
 		HttpSession session = request.getSession();
 		System.out.println(session.getAttribute("loginOK"));
+		// 회원 이름, 엠비티아이 정보 수정하는 메소드 호출
 		n = dao.updateMember(request.getParameter("name"), request.getParameter("mbti"), (String)session.getAttribute("loginOK"));
 		
 		if (n > 0) {

@@ -126,10 +126,12 @@
 </head>
 <body>
 <%
-	// 로그인 세션 상태 확인
+	// 로그인 세션 상태 확인하고 접근권한 처리하는 로직
 	if ((String)session.getAttribute("loginOK") == null) {
 		out.print("<script>alert('로그인이 필요한 서비스입니다♥'); history.back();</script>");
-		if( true ) return ; // 아래 코드가 실행되지 않고 다시 돌아가도록 exit하는
+		// ● 수업 내 활용하지 않은 기능 ●
+		// JSP에서 아래 코드가 실행되지 않고 끝나도록 exit하는
+		if( true ) return ;
 	}
 %>
 
@@ -161,14 +163,15 @@
 	</header>
 <%	
 	MbtiDao dao = new MbtiDao();
+	// 로그인한 사용자의 정보 가져와서
 	ArrayList<String> user = dao.getMember((String)session.getAttribute("loginOK"));
+	// 그 엠비티아이에 맞는 엠비티아이들 목록을 꺼내옴
 	ArrayList<String> result = dao.getChemiList(user.get(3));
 	
 %>
 
 	<div id="loading">
         <div>
-            <!-- 요정 -->
             <img src="/resources/fairy.png">
         </div>
         <h2>당신의 천생연분은 어떤 유형?</h2>
@@ -203,6 +206,9 @@
     </footer>
     
 <%
+	// ● 수업 내 활용하지 않은 기능 ● 
+	// 페이지가 로딩되자마자 #loading을 3초 동안 보이게 해서 로딩중 화면같은 효과를 주는 자바스크립트 코드. 3초가 지나면 원래의 컨텐츠가 보임. 
+	// 자바스크립트 setTimeout() 매소드 이용.
 	out.print("<script> window.addEventListener('load', () => {document.querySelector('#wrapper').style.display = 'none';document.querySelector('#loading').style.display = 'block';setTimeout(() => {document.querySelector('#wrapper').style.display = 'flex';document.querySelector('#loading').style.display = 'none';	}, 3500);});</script>");
 %>
 </body>

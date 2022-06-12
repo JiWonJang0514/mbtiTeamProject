@@ -136,7 +136,7 @@
 	<div class="wrapper">
 	
 	    <div id="container">
-	        <form action="/login" method="get">
+	        <form action="/login" method="post">
 	            <h1>로그인</h1>
 	
 	            <div>

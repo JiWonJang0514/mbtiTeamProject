@@ -148,6 +148,7 @@
 	            <h1>마이페이지</h1>
 	
 	            <div>
+	            	<!-- 아이디, 비밀번호는 바꿀 수 없게 기획했기 때문에 입력 불가능한 disabled 속성을 넣어주고 자신의 아이디, 비밀번호 확인만 할 수 있게 함. -->
 	            	<div>
 	                    <small>아이디</small><br>
 	                    <input type="text" value="<%= user.get(0) %>" disabled="disabled">
@@ -156,6 +157,7 @@
 	                    <small>비밀번호</small><br>
 	                    <input type="text" value="<%= user.get(1) %>" disabled="disabled">
 	                </div>
+	                <!-- 현재 이름, 엠비티아이 값을 기본으로 넣어서 확인 가능하게 함. -->
 	                <div>
 	                    <small>이름</small><br>
 	                    <input type="text" name="name" id="name" value="<%= user.get(2) %>">
@@ -163,6 +165,8 @@
 	                <div style="margin-top: 20px;">
 	                    <small>엠비티아이</small><br>
 	                    <select name="mbti" id="mbti" style="width: 177px;" value="<%= user.get(3) %>">
+	                    	<option value="<%= user.get(3) %>"><%= user.get(3) %></option>
+	                    
 		                    <option value="INTJ">INTJ</option>
 		                    <option value="INTP">INTP</option>
 		                    <option value="ENTJ">ENTJ</option>
