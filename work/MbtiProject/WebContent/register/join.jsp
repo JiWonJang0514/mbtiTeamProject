@@ -10,7 +10,7 @@
     body {
         margin: 0;
         padding: 0;
-        background-image: url('../resources/background.png');
+        background-image: url('/resources/backgorund_01.jpg');
     }
     
     .wrapper {
@@ -125,7 +125,7 @@
 	<div class="wrapper">
 	
 	    <div id="container">
-	        <form action="./join_act.jsp" method="post">
+	        <form action="/join_act.jsp" method="post">
 	            <h1>회원가입</h1>
 	            <div>
 	                <div>
