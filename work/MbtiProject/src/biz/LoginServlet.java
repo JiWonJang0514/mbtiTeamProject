@@ -35,7 +35,7 @@ public class LoginServlet extends HttpServlet {
 		if (result) {
 			HttpSession session = request.getSession();
 			session.setAttribute("logOK", id);
-			response.sendRedirect("/register/mypage.jsp");
+			response.sendRedirect("/index.jsp");
 		}else {
 			out.print("<script> alert('회원 정보가 일치 하지 않습니다.'); "
 					+ "history.back(); </script>");

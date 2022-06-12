@@ -1,4 +1,3 @@
-<%@page import="jdk.internal.misc.FileSystemOption"%>
 <%@page import="dao.MbtiDao"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
