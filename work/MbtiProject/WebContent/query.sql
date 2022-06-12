@@ -24,6 +24,9 @@ select a.* from users a inner join (select * from mbti_match where mbti_1='INFP'
 select * from mbti_match where mbti_1='INFP';
 
 
+
+
+
 --users 더미데이터
 insert into users values('seungyeon01', '1234', '오승연', 'ENTP');
 insert into users values('seonghan02', '1234', '정성한', 'ENTP');
@@ -36,6 +39,7 @@ insert into users values('jeonghyeon08', '1234', '송정현', 'ISFJ');
 insert into users values('seoyoon09', '1234', '최서윤', 'ENTP');
 insert into users values('yerin10', '1234', '정예린', 'INFP');
 insert into users values('jiwon02', '1234', '이지원', 'ESTJ');
+
 
 --mbti_match 구축용 데이터(실행전에 디비 생성 새로 한다면 반드시 이 쿼리 해주기)
 insert into mbti_match values('INFP', 'ENFJ');
