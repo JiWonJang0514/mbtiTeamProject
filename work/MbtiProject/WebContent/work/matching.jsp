@@ -139,6 +139,15 @@
 </style>
 </head>
 <body>
+<%
+	// 로그인 세션 상태 확인
+	if ((String)session.getAttribute("loginOK") == null) {
+		out.print("<script>alert('로그인이 필요한 서비스입니다♥'); history.back();</script>");
+		if( true ) return ; // 아래 코드가 실행되지 않고 다시 돌아가도록 exit하는
+	}
+%>
+
+
 	<header>
 	    <nav>
 	        <div id="logo">
@@ -147,9 +156,20 @@
 	        <ul>
 	            <li><a href="/work/chemistry.jsp">궁합보기</a></li>
 	            <li><a href="/work/matching.jsp">매칭하기</a></li>
+            <%
+            	if ((String)session.getAttribute("loginOK") == null) {
+            %>
+            	<li><a href="/register/join.jsp">회원가입</a></li>
+            	<li><a href="/register/login.jsp">로그인</a></li>
+            <%	
+            	} else {
+            %>
 	            <li><a href="/register/mypage.jsp">마이페이지</a></li>
-	            <li><a href="/register/login.jsp">로그인</a></li>
-	            <li><a href="/register/join.jsp">회원가입</a></li>
+	            <li><a href="/logout">로그아웃</a></li>
+	        <%
+            	}
+	        %>
+	            
 	        </ul>
 	    </nav>
 	</header>
@@ -161,9 +181,7 @@
 	
 <%
 	MbtiDao dao = new MbtiDao();
-
-	String s = (String)session.getAttribute("loginOK");
-	ArrayList<String> user = dao.getMember(s);
+	ArrayList<String> user = dao.getMember((String)session.getAttribute("loginOK"));
 	ArrayList<String> result = dao.getMatchingList(user.get(3));
 	for(int i = 0; i < result.size(); i++) {
 %>
