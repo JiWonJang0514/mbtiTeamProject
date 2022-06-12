@@ -10,7 +10,7 @@
     body {
         margin: 0;
         padding: 0;
-        background-image: url('resources/background.png');
+        background-image: url('/resources/backgorund_01.jpg');
     }
     
     .wrapper {
@@ -82,6 +82,29 @@
     	font-weight: bold;
     }
     /* ------ */
+    
+    
+    #container {
+    	margin: 150px auto 0 auto;
+    	padding: 10px 0 40px 0;
+    	width: 400px;
+    	border-radius: 20px;
+    	background: white;
+    }
+    form {
+    	margin: auto;
+    	width: 200px;
+    	text-align: center;
+    	font-weight: bold;
+    }
+    form > div {
+    	width: 100%;
+    	text-align: left;
+    }
+    form button {
+	padding: 10px 15px;
+	border-radius: 20px;
+    }
 </style>
 </head>
 <body>
@@ -93,7 +116,7 @@
 	        <ul>
 	            <li><a href="/work/chemistry.jsp">궁합보기</a></li>
 	            <li><a href="/work/matching.jsp">매칭하기</a></li>
-	            <li><a href="/register/mypage.jsp">MYPAGE</a></li>
+	            <li><a href="/register/mypage.jsp">마이페이지</a></li>
 	            <li><a href="/register/login.jsp">로그인</a></li>
 	            <li><a href="/register/join.jsp">회원가입</a></li>
 	        </ul>
@@ -102,10 +125,18 @@
 	
 	<div class="wrapper">
 	    <div id="container">
-	        <form action="/login" method="get">
+	        <form action="/update" method="post">
 	            <h1>마이페이지</h1>
 	
 	            <div>
+	            	<div>
+	                    <small>아이디</small><br>
+	                    <input type="text" disabled="disabled">
+	                </div>
+	                <div>
+	                    <small>비밀번호</small><br>
+	                    <input type="text" disabled="disabled">
+	                </div>
 	                <div>
 	                    <small>이름</small><br>
 	                    <input type="text" name="name" id="name">
