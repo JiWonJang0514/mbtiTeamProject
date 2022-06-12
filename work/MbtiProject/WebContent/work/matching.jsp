@@ -1,3 +1,5 @@
+<%@page import="java.util.ArrayList"%>
+<%@page import="dao.MbtiDao"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -82,6 +84,58 @@
        font-weight: bold;
    }
    /* ------ */
+   
+   
+   
+   /*회원목록*/
+   #box {
+       margin: 100px auto 0 auto;
+       width: 800px;
+       display: grid;
+       grid-template-columns: 1fr 1fr 1fr 1fr;
+       gap: 2rem;
+   }
+
+   .item {
+       width: 180px;
+       height: 220px;
+       border-radius: 20px;
+       overflow: hidden;
+       background-color: white;
+       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+   }
+
+   .item_img {
+       width: 100%;
+       height: 120px;
+       background-image: url("/resources/backgorund_01.jpg");
+   }
+   .item_img > img {
+       width: 100%;
+       height: 100%;
+       object-fit: contain;
+   }
+
+   .item_txt {
+       padding: 0.5rem 1rem;
+   }
+
+   .item_txt > span {
+       display: block;
+   }
+
+   .item_txt > span:nth-child(1) {
+       font-size: 22px;
+   }
+   
+   
+    h2 {
+    	margin-top: 50px;
+   		font-size: 35px;
+   		text-align: center;
+   		text-shadow: 2px 2px 15px hotpink;
+   		color: rgb(255, 251, 211);
+   }
 </style>
 </head>
 <body>
@@ -100,7 +154,37 @@
 	    </nav>
 	</header>
 	
+
+	<h2>당신과 잘 맞는 다른 회원</h2>
 	
+	<div id="box">
+	
+<%
+	MbtiDao dao = new MbtiDao();
+
+	String s = (String)session.getAttribute("loginOK");
+	ArrayList<String> user = dao.getMember(s);
+	ArrayList<String> result = dao.getMatchingList(user.get(3));
+	for(int i = 0; i < result.size(); i++) {
+%>
+
+		<div class="item">
+            <div class="item_img">
+                <img src="/resources/fairy.png">
+            </div>
+            <div class="item_txt">
+                <span><%= result.get(i) %></span>
+                <span><%= result.get(i+1) %></span>
+                <span><%= result.get(i+2) %></span>
+            </div>
+        </div>
+	
+<%	
+		i += 2;
+	}
+%>
+        
+	</div>
 
     <footer>
         Copyright 2022. YYDH Software 2-2. All rights reserved.

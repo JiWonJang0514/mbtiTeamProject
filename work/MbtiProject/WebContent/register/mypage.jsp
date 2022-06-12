@@ -1,3 +1,5 @@
+<%@page import="dao.MbtiDao"%>
+<%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -123,6 +125,12 @@
 	    </nav>
 	</header>
 	
+<%
+	MbtiDao dao = new MbtiDao();
+	
+	String s = (String)session.getAttribute("loginOK");
+	ArrayList<String> user = dao.getMember(s);
+%>
 	<div class="wrapper">
 	    <div id="container">
 	        <form action="/update" method="post">
@@ -131,19 +139,19 @@
 	            <div>
 	            	<div>
 	                    <small>아이디</small><br>
-	                    <input type="text" disabled="disabled">
+	                    <input type="text" value="<%= user.get(0) %>" disabled="disabled">
 	                </div>
 	                <div>
 	                    <small>비밀번호</small><br>
-	                    <input type="text" disabled="disabled">
+	                    <input type="text" value="<%= user.get(1) %>" disabled="disabled">
 	                </div>
 	                <div>
 	                    <small>이름</small><br>
-	                    <input type="text" name="name" id="name">
+	                    <input type="text" name="name" id="name" value="<%= user.get(2) %>">
 	                </div>
 	                <div style="margin-top: 20px;">
 	                    <small>엠비티아이</small><br>
-	                    <select name="mbti" id="mbti" style="width: 177px;">
+	                    <select name="mbti" id="mbti" style="width: 177px;" value="<%= user.get(3) %>">
 		                    <option value="INTJ">INTJ</option>
 		                    <option value="INTP">INTP</option>
 		                    <option value="ENTJ">ENTJ</option>

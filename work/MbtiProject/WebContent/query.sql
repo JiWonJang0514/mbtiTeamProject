@@ -5,7 +5,7 @@ select * from users;
 select * from mbti_match;
 
 --엠비티아이가 매칭에 있는 users 회원들만 셀렉트
---select a.* from users a inner join mbti_match b on b.mbti_2=a.mbti where b.mbti_1='INFP';
+select a.* from users a inner join (select * from mbti_match where mbti_1='INFP') b on a.mbti=b.mbti_2; 
 
 --궁합보기 셀렉트
 select * from mbti_match where mbti_1='INFP';
@@ -25,6 +25,9 @@ create table mbti_match(
 
 insert into users values('candy05', '1234', '홍길동', 'INFJ');
 insert into users values('wendy05', '1234', '홍길동', 'ENFJ');
+insert into users values('ddy05', '1234', '홍길동', 'ENFJ');
+insert into users values('sdy05', '1234', '홍길동', 'ENFJ');
+insert into users values('qdy05', '1234', '홍길동', 'ENFJ');
 
 insert into mbti_match values('INFP', 'ENFJ');
 insert into mbti_match values('INFP', 'ENTJ');

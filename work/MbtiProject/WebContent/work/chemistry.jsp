@@ -141,15 +141,14 @@
 	</header>
 <%	
 	MbtiDao dao = new MbtiDao();
+	
 	String s = (String)session.getAttribute("loginOK");
-	
-	out.print(s);
-	
 	ArrayList<String> user = dao.getMember(s);
-	ArrayList<String> result = dao.getChemiList("INFP");
-	// out.print(result.get(0));
-	// out.print(result.get(1));
-	out.print(user.get(0) + "--------------------------------셀렉ㅌ츠");
+	ArrayList<String> result = dao.getChemiList(user.get(3));
+	
+	//out.print(result.get(0));
+	//out.print(result.get(1));
+	
 %>
 
 	<div id="loading">
@@ -164,7 +163,7 @@
 	<div id="wrapper">
 		<div class="box">
 	        <div>
-	            <img src="/resources/INFP.png">
+	            <img src="/resources/<%= user.get(3) %>.png">
 	        </div>
 	        <div>
 	            <img src="/resources/<%= result.get(0) %>.png">
@@ -174,7 +173,7 @@
 	    
 	    <div class="box">
 	        <div>
-	            <img src="/resources/INFP.png">
+	            <img src="/resources/<%= user.get(3) %>.png">
 	        </div>
 	        <div>
 	            <img src="/resources/<%= result.get(1) %>.png">
@@ -188,16 +187,8 @@
         Copyright 2022. YYDH Software 2-2. All rights reserved.
     </footer>
     
-    
-    <script>
-    	window.addEventListener('load', () => {
-    		document.querySelector("#wrapper").style.display = "none";
-    		document.querySelector("#loading").style.display = "block";
-    		setTimeout(() => {
-    			document.querySelector("#wrapper").style.display = "flex";
-        		document.querySelector("#loading").style.display = "none";	
-    		}, 3500);
-    	});
-    </script>
+<%
+	out.print("<script> window.addEventListener('load', () => {document.querySelector('#wrapper').style.display = 'none';document.querySelector('#loading').style.display = 'block';setTimeout(() => {document.querySelector('#wrapper').style.display = 'flex';document.querySelector('#loading').style.display = 'none';	}, 3500);});</script>");
+%>
 </body>
 </html>

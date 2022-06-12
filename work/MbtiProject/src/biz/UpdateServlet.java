@@ -6,6 +6,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import dao.MbtiDao;
 
@@ -27,7 +28,9 @@ public class UpdateServlet extends HttpServlet {
 		System.out.println(request.getParameter("name"));
 		System.out.println(request.getParameter("mbti"));
 		
-		n = dao.updateMember(request.getParameter("name"), request.getParameter("mbti"), "candy05");
+		HttpSession session = request.getSession();
+		System.out.println(session.getAttribute("loginOK"));
+		n = dao.updateMember(request.getParameter("name"), request.getParameter("mbti"), (String)session.getAttribute("loginOK"));
 		
 		if (n > 0) {
 			System.out.println("***************************마이페이지 수정 성공");

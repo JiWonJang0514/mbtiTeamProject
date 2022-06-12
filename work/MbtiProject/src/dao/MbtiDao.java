@@ -34,22 +34,25 @@ public class MbtiDao {
 	}
 	
 	//	회원 매칭 셀렉트
-	public ArrayList<String> getMatchingList() {
+	public ArrayList<String> getMatchingList(String mbti) {
 		ArrayList<String> list = new ArrayList<>();
 		
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
 //		엠비티아이가 매칭에 있는 users 회원들만 셀렉트
-		String sql = "";  
+		String sql = "select a.* from users a inner join (select * from mbti_match where mbti_1=?) b on a.mbti=b.mbti_2";  
 		
 		conn = JdbcUtil.getConnection();
 		try {
 			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, mbti);
 			rs = pstmt.executeQuery();
 			
 			while(rs.next()) {
-				list.add(rs.getString("mbti_2"));
+				list.add(rs.getString("mbti"));
+				list.add(rs.getString("name"));
+				list.add(rs.getString("id"));
 			}
 			
 		} catch (SQLException e) {
@@ -129,7 +132,7 @@ public class MbtiDao {
 		
 		Connection conn = null;
 		PreparedStatement pstmt = null;
-		String sql = "update user set name=?, mbti=? where id=?";
+		String sql = "update users set name=?, mbti=? where id=?";
 		
 		conn = JdbcUtil.getConnection();
 		try {
