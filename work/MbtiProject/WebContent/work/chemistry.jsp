@@ -141,9 +141,15 @@
 	</header>
 <%	
 	MbtiDao dao = new MbtiDao();
+	String s = (String)session.getAttribute("loginOK");
+	
+	out.print(s);
+	
+	ArrayList<String> user = dao.getMember(s);
 	ArrayList<String> result = dao.getChemiList("INFP");
 	// out.print(result.get(0));
 	// out.print(result.get(1));
+	out.print(user.get(0) + "--------------------------------셀렉ㅌ츠");
 %>
 
 	<div id="loading">
