@@ -27,7 +27,7 @@ select * from mbti_match where mbti_1='INFP';
 
 
 
---users 더미데이터
+--users 데이터
 insert into users values('seungyeon', '1234', '오승연', 'ENTP');
 insert into users values('seonghan', '1234', '정성한', 'ENTP');
 insert into users values('jiwon01', '1234', '장지원', 'ISTJ');
