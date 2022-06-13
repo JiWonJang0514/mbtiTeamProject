@@ -37,17 +37,17 @@ insert into users values('ayeong', '1234', '정아영', 'INFP');
 insert into users values('gain', '1234', '김가인', 'ESTP');
 insert into users values('jeonghyeon', '1234', '송정현', 'ISFJ');
 insert into users values('seoyoon', '1234', '최서윤', 'ENTP');
+insert into users values('yoochan', '1234', '신유찬', 'ISFP');
 insert into users values('yerin', '1234', '정예린', 'INFP');
 insert into users values('jiwon02', '1234', '이지원', 'ESTJ');
 insert into users values('hayeong', '1234', '박하영', 'ENTJ');
 insert into users values('hayeon', '1234', '강하연', 'INFP');
+insert into users values('yeongjin', '1234', '최영진', 'ISTJ');
 insert into users values('uenbin', '1234', '고은빈', 'ESFP');
 insert into users values('seoyeon', '1234', '최서연', 'ESTP');
+insert into users values('jinho', '1234', '조진호', 'ESFP');
 insert into users values('chanbi', '1234', '임찬비', 'ENFP');
 insert into users values('hwan', '1234', '김환', 'INFP');
-insert into users values('yoochan', '1234', '신유찬', 'ISFP');
-insert into users values('yeongjin', '1234', '최영진', 'ISTJ');
-insert into users values('jinho', '1234', '조진호', 'ESFP');
 
 
 --mbti_match 구축용 데이터(실행전에 디비 생성 새로 한다면 반드시 이 쿼리 해주기)
