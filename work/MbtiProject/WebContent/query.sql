@@ -28,22 +28,26 @@ select * from mbti_match where mbti_1='INFP';
 
 
 --users 더미데이터
-insert into users values('seungyeon01', '1234', '오승연', 'ENTP');
-insert into users values('seonghan02', '1234', '정성한', 'ENTP');
-insert into users values('jiwon03', '1234', '장지원', 'ISTJ');
-insert into users values('inyeong04', '1234', '배인영', 'INFJ');
-insert into users values('yeongeun05', '1234', '김영은', 'ENFP');
-insert into users values('ayeong06', '1234', '정아영', 'INFP');
-insert into users values('gain07', '1234', '김가인', 'ESTP');
-insert into users values('jeonghyeon08', '1234', '송정현', 'ISFJ');
-insert into users values('seoyoon09', '1234', '최서윤', 'ENTP');
-insert into users values('yerin10', '1234', '정예린', 'INFP');
+insert into users values('seungyeon', '1234', '오승연', 'ENTP');
+insert into users values('seonghan', '1234', '정성한', 'ENTP');
+insert into users values('jiwon01', '1234', '장지원', 'ISTJ');
+insert into users values('inyeong', '1234', '배인영', 'INFJ');
+insert into users values('yeongeun', '1234', '김영은', 'ENFP');
+insert into users values('ayeong', '1234', '정아영', 'INFP');
+insert into users values('gain', '1234', '김가인', 'ESTP');
+insert into users values('jeonghyeon', '1234', '송정현', 'ISFJ');
+insert into users values('seoyoon', '1234', '최서윤', 'ENTP');
+insert into users values('yerin', '1234', '정예린', 'INFP');
 insert into users values('jiwon02', '1234', '이지원', 'ESTJ');
-insert into users values('hayeong02', '1234', '박하영', 'ENTJ');
-insert into users values('hayeon02', '1234', '강하연', 'INFP');
-insert into users values('uenbin02', '1234', '고은빈', 'ESFP');
-insert into users values('seoyeon02', '1234', '최서연', 'ESTP');
-insert into users values('chanbi02', '1234', '임찬비', 'ENFP');
+insert into users values('hayeong', '1234', '박하영', 'ENTJ');
+insert into users values('hayeon', '1234', '강하연', 'INFP');
+insert into users values('uenbin', '1234', '고은빈', 'ESFP');
+insert into users values('seoyeon', '1234', '최서연', 'ESTP');
+insert into users values('chanbi', '1234', '임찬비', 'ENFP');
+insert into users values('hwan', '1234', '김환', 'INFP');
+insert into users values('yoochan', '1234', '신유찬', 'ISFP');
+insert into users values('yeongjin', '1234', '최영진', 'ISTJ');
+insert into users values('jinho', '1234', '조진호', 'ESFP');
 
 
 --mbti_match 구축용 데이터(실행전에 디비 생성 새로 한다면 반드시 이 쿼리 해주기)
